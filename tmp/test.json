@@ -1,0 +1,145 @@
+{
+  e: 'ORDER_TRADE_UPDATE',// Event Type
+  T: 1681493133315, // Event Time 
+  E: 1681493133320, // Transaction Time
+  o: {
+    s: 'ATOMUSDT', // Symbol
+    c: 'nd2loZQ7ALdhruH8f7JytL', // Client Order Id
+    S: 'SELL', // Side
+    o: 'MARKET',  // Order Type
+    f: 'GTC', // Time in Force
+    q: '9.88', // Original Quantity
+    p: '0', // Original Price
+    ap: '0', // Average Price
+    sp: '0', // Stop Price. Please ignore with TRAILING_STOP_MARKET order
+    x: 'NEW', // Execution Type
+    X: 'NEW', // Order Status
+    i: 15834019234, // Order Id
+    l: '0', // Order Last Filled Quantity
+    z: '0', // Order Filled Accumulated Quantity
+    L: '0',  // Last Filled Price
+    n: '0', // Commission, will not push if no commission
+    N: 'USDT', // Commission Asset, will not push if no commission
+    T: 1681493133315, // Order Trade Time
+    t: 0, // Trade Id
+    b: '0', // Bids Notional
+    a: '0', // Ask Notional
+    m: false, // Is this trade the maker side?
+    R: true, // Is this reduce only
+    wt: 'CONTRACT_PRICE', // Stop Price Working Type
+    ot: 'MARKET', // Original Order Type
+    ps: 'LONG',  // Position Side
+    cp: false, // If Close-All, pushed with conditional order
+    rp: '0',  // Realized Profit of the trade
+    pP: false, // ignore
+    si: 0, // ignore
+    ss: 0 // ignore
+  }
+}
+new message:
+isnt order update:
+{
+  e: 'ACCOUNT_UPDATE',
+  T: 1681493133315,
+  E: 1681493133320,
+  a: { B: [ [Object], [Object] ], P: [ [Object] ], m: 'ORDER' }
+}
+{
+  e: 'ORDER_TRADE_UPDATE',
+  T: 1681493133315,
+  E: 1681493133320,
+  o: {
+    s: 'ATOMUSDT',
+    c: 'nd2loZQ7ALdhruH8f7JytL',
+    S: 'SELL',
+    o: 'MARKET',
+    f: 'GTC',
+    q: '9.88',
+    p: '0',
+    ap: '0',
+    sp: '0',
+    x: 'NEW',
+    X: 'NEW',
+    i: 15834019234,
+    l: '0',
+    z: '0',
+    L: '0',
+    n: '0',
+    N: 'USDT',
+    T: 1681493133315,
+{
+  e: 'ORDER_TRADE_UPDATE',
+  T: 1681493133315,
+  E: 1681493133320,
+  o: {
+    s: 'ATOMUSDT',
+    c: 'nd2loZQ7ALdhruH8f7JytL',
+    S: 'SELL',
+    o: 'MARKET',
+    f: 'GTC',
+    q: '9.88',
+    p: '0',
+    ap: '12.28300',
+    sp: '0',
+    x: 'TRADE',
+    X: 'FILLED',
+    i: 15834019234,
+    l: '9.88',
+    z: '9.88',
+    L: '12.283',
+    n: '0.00013365',
+    N: 'BNB',
+    T: 1681493133315,
+    t: 532465669,
+    b: '0',
+    a: '0',
+    m: false,
+    R: true,
+    wt: 'CONTRACT_PRICE',
+    ot: 'MARKET',
+    ps: 'LONG',
+    cp: false,
+    rp: '1.41374999',
+    pP: false,
+    si: 0,
+    ss: 0
+  }
+}
+{
+  e: 'ORDER_TRADE_UPDATE',
+  T: 1681493133315,
+  E: 1681493133320,
+  o: {
+    s: 'ATOMUSDT',
+    c: 'nd2loZQ7ALdhruH8f7JytL',
+    S: 'SELL',
+    o: 'MARKET',
+    f: 'GTC',
+    q: '9.88',
+    p: '0',
+    ap: '12.28300',
+    sp: '0',
+    x: 'TRADE',
+    X: 'FILLED',
+    i: 15834019234,
+    l: '9.88',
+    z: '9.88',
+    L: '12.283',
+    n: '0.00013365',
+    N: 'BNB',
+    T: 1681493133315,
+    t: 532465669,
+    b: '0',
+    a: '0',
+    m: false,
+    R: true,
+    wt: 'CONTRACT_PRICE',
+    ot: 'MARKET',
+    ps: 'LONG',
+    cp: false,
+    rp: '1.41374999',
+    pP: false,
+    si: 0,
+    ss: 0
+  }
+}{"e":"ORDER_TRADE_UPDATE","T":1681496164076,"E":1681496164080,"o":{"s":"ETCUSDT","c":"8BVqkGMjbirAQFoG8IhOj0","S":"SELL","o":"MARKET","f":"GTC","q":"3.58","p":"0","ap":"0","sp":"0","x":"NEW","X":"NEW","i":17129578589,"l":"0","z":"0","L":"0","n":"0","N":"USDT","T":1681496164076,"t":0,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"SHORT","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681496164076,"E":1681496164080,"o":{"s":"ETCUSDT","c":"8BVqkGMjbirAQFoG8IhOj0","S":"SELL","o":"MARKET","f":"GTC","q":"3.58","p":"0","ap":"22.37200","sp":"0","x":"TRADE","X":"FILLED","i":17129578589,"l":"3.58","z":"3.58","L":"22.372","n":"0.00008780","N":"BNB","T":1681496164076,"t":697036901,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"SHORT","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681496695343,"E":1681496695348,"o":{"s":"UNIUSDT","c":"mOcuBab1kt23SItMosxxs3","S":"SELL","o":"MARKET","f":"GTC","q":"13","p":"0","ap":"0","sp":"0","x":"NEW","X":"NEW","i":18662635073,"l":"0","z":"0","L":"0","n":"0","N":"USDT","T":1681496695343,"t":0,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"SHORT","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681496695343,"E":1681496695348,"o":{"s":"UNIUSDT","c":"mOcuBab1kt23SItMosxxs3","S":"SELL","o":"MARKET","f":"GTC","q":"13","p":"0","ap":"6.3120","sp":"0","x":"TRADE","X":"FILLED","i":18662635073,"l":"13","z":"13","L":"6.3120","n":"0.00008997","N":"BNB","T":1681496695343,"t":299670322,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"SHORT","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681498059437,"E":1681498059441,"o":{"s":"EOSUSDT","c":"DcYe8OVZ52gCcT5Wi3b4lb","S":"SELL","o":"MARKET","f":"GTC","q":"64.2","p":"0","ap":"0","sp":"0","x":"NEW","X":"NEW","i":21021326292,"l":"0","z":"0","L":"0","n":"0","N":"USDT","T":1681498059437,"t":0,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"SHORT","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681498059437,"E":1681498059441,"o":{"s":"EOSUSDT","c":"DcYe8OVZ52gCcT5Wi3b4lb","S":"SELL","o":"MARKET","f":"GTC","q":"64.2","p":"0","ap":"1.2460","sp":"0","x":"TRADE","X":"FILLED","i":21021326292,"l":"64.2","z":"64.2","L":"1.246","n":"0.00008793","N":"BNB","T":1681498059437,"t":520206992,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"SHORT","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681501682205,"E":1681501682210,"o":{"s":"LTCUSDT","c":"t8ON4sxFLuF33RlZsMPGkO","S":"SELL","o":"MARKET","f":"GTC","q":"0.836","p":"0","ap":"0","sp":"0","x":"NEW","X":"NEW","i":22387111712,"l":"0","z":"0","L":"0","n":"0","N":"USDT","T":1681501682205,"t":0,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"SHORT","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681501682205,"E":1681501682210,"o":{"s":"LTCUSDT","c":"t8ON4sxFLuF33RlZsMPGkO","S":"SELL","o":"MARKET","f":"GTC","q":"0.836","p":"0","ap":"95.70000","sp":"0","x":"TRADE","X":"FILLED","i":22387111712,"l":"0.836","z":"0.836","L":"95.70","n":"0.00008759","N":"BNB","T":1681501682205,"t":688849629,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"SHORT","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681503230890,"E":1681503230895,"o":{"s":"CHZUSDT","c":"UY5qQcY8Ljgz04nHXis3ka","S":"SELL","o":"MARKET","f":"GTC","q":"905","p":"0","ap":"0","sp":"0","x":"NEW","X":"NEW","i":9379096681,"l":"0","z":"0","L":"0","n":"0","N":"USDT","T":1681503230890,"t":0,"b":"0","a":"0","m":false,"R":true,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"LONG","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681503230890,"E":1681503230895,"o":{"s":"CHZUSDT","c":"UY5qQcY8Ljgz04nHXis3ka","S":"SELL","o":"MARKET","f":"GTC","q":"905","p":"0","ap":"0.13403","sp":"0","x":"TRADE","X":"FILLED","i":9379096681,"l":"905","z":"905","L":"0.13403","n":"0.00013282","N":"BNB","T":1681503230890,"t":448789514,"b":"0","a":"0","m":false,"R":true,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"LONG","cp":false,"rp":"1.33671999","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681503282811,"E":1681503282816,"o":{"s":"CHZUSDT","c":"NSD3Zv94hU4ygUkaBmqDny","S":"BUY","o":"MARKET","f":"GTC","q":"298","p":"0","ap":"0","sp":"0","x":"NEW","X":"NEW","i":9379105773,"l":"0","z":"0","L":"0","n":"0","N":"USDT","T":1681503282811,"t":0,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"LONG","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}{"e":"ORDER_TRADE_UPDATE","T":1681503282811,"E":1681503282816,"o":{"s":"CHZUSDT","c":"NSD3Zv94hU4ygUkaBmqDny","S":"BUY","o":"MARKET","f":"GTC","q":"298","p":"0","ap":"0.13414","sp":"0","x":"TRADE","X":"FILLED","i":9379105773,"l":"298","z":"298","L":"0.13414","n":"0.00004377","N":"BNB","T":1681503282811,"t":448790938,"b":"0","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"MARKET","ps":"LONG","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}

@@ -26,12 +26,14 @@ async function loadAccounts() {
 }
 
 function copyTrade(trade) {
-
+    trade = trade.o;
     const data = {
         symbol: trade.s,
         side: trade.S,
         type: trade.o
     }
+    if (trade.ps)
+        data.positionSide = trade.ps;
 
     if (trade.q && parseFloat(trade.q))
         data.quantity = trade.q;
@@ -50,6 +52,8 @@ function copyTrade(trade) {
 
     return data;
 }
+
+
 
 function log_to_file(data, file_name = 'original_trades') {
 
@@ -99,10 +103,23 @@ async function start() {
 
     const ws = new WebSocket(`${process.env.BINANCE_WS_URL}/${listenKey}`);
 
+    
+
     //log_to_file({1:256}, 'original_trades');
     // log_to_file({1:256}, 'original_trades');
     // log_to_file({2:256856}, 'open_trades');
     // log_to_file({2:256856}, 'open_trades');
+
+    // const pairs = process.env[`TRADER2_PAIRS`];
+
+    // const pairs_array = pairs.split(',');
+
+    // if(!pairs_array.includes('APEUSDT')) {
+    //     console.log('ALLOWED PAIRS '+JSON.stringify(pairs_array));
+    //     console.log('pair is out of allowed pairs APEUSDT');
+    //     return;
+    // }
+
 
     ws.onmessage = async (event) => {
         console.log('new message:');
@@ -120,7 +137,7 @@ async function start() {
                 log_to_file(data, 'open_trades');
                 const promises = accounts.map(acc => api.newOrder(data, acc.apiKey, acc.apiSecret, acc.slice, acc.pairs));
                 const results = await Promise.allSettled(promises);
-                log_to_file(results, 'binance_trades');
+                log_to_file(data, 'binance_trades');
 
                 //para não entrar em loop durante os testes, descomente abaixo
                 //process.exit(0);
@@ -128,6 +145,7 @@ async function start() {
                 console.log('isnt order update:');
                 console.log(trade);
             }
+            log_to_file(trade, 'all_ws');
         }
         catch (err) {
             console.error(err);

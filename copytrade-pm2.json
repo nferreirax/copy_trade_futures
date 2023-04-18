@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "copytrade",
+            "script": "npm",
+            "args": "start"
+        }
+    ]
+}

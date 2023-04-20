@@ -6,6 +6,8 @@ const accounts = [];
 
 const api = require("./api");
 
+const slice = 0.3;
+
 async function loadAccounts() {
     const { listenKey } = await api.connectAccount();
     console.log(`ListenKey obtained/updated: ${listenKey}`);
@@ -23,6 +25,15 @@ async function loadAccounts() {
     console.log(`${i - 1} copy accounts loaded`);
 
     return listenKey;
+}
+
+async function getQuantity(trade) {
+
+    const quantity_precision = await getMinNotionQuantity(trade.symbol);
+
+    // const pairs_array = pairs.split(',');
+    let quantity = parseFloat(data_original.quantity * slice);
+    return quantity.toFixed(quantity_precision);
 }
 
 function copyTrade(trade) {
@@ -103,7 +114,19 @@ async function start() {
 
     const ws = new WebSocket(`${process.env.BINANCE_WS_URL}/${listenKey}`);
 
-    
+
+    // let userToken = await api.exchangeInfo();
+    // data = userToken.symbols;
+    // //console.log(data) // your data
+
+    // const myKey = Object.keys(data).find(x => data[x].symbol === 'DENTUSDT');
+    //     let userToken = await api.getMinNotionQuantity();
+
+    // console.log(userToken);
+
+    // console.log(api.exchangeInfo());
+
+    //process.exit(0);
 
     //log_to_file({1:256}, 'original_trades');
     // log_to_file({1:256}, 'original_trades');
